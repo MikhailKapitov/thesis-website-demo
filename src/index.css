@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+/* Notch for the phone frame. */
+.phone-notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  max-width: 120px;
+  height: 1.5rem;
+  background: #000;
+  border-radius: 0 0 1rem 1rem;
+  z-index: 10;
+  box-shadow: 0 0 0 3px #1f2937; /* Same as outer border. */
+}

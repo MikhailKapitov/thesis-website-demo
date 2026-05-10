@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import "./App.css";
 
 // Matches 9:19.5.
@@ -61,12 +62,20 @@ function App() {
             view data and help collect it.
           </p>
           <div className="flex flex-wrap justify-center md:justify-start gap-3 pt-2">
-            <button className="px-6 py-3 bg-emerald-600 text-white font-semibold rounded-xl shadow-md hover:bg-emerald-700 transition">
+            <a
+              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-emerald-600 text-white font-semibold rounded-xl shadow-md hover:bg-emerald-700 transition inline-block"
+            >
               Get the app
-            </button>
-            <button className="px-6 py-3 border border-gray-300 rounded-xl font-semibold text-gray-700 hover:bg-gray-100 transition">
+            </a>
+            <Link
+              to="/learn-more"
+              className="px-6 py-3 border border-gray-300 rounded-xl font-semibold text-gray-700 hover:bg-gray-100 transition inline-block"
+            >
               Learn more
-            </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -10,7 +10,9 @@ A demo for our thesis project.
    ```
 2. Pull and update the submodule.
    ```bash
-   git submodule update --init --recursive
+   cd ./public/map
+   git pull origin main
+   cd ../..
    ```
 3. Run the website.
    ```bash

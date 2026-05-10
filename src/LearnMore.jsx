@@ -49,11 +49,11 @@ function LearnMore() {
 
         <div className="text-center md:text-left mb-12">
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 mb-4">
-            Everything you need to explore
+            NoiseWatch
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl md:mx-0 mx-auto">
-            Our map engine is built for speed, clarity, and real‑world use.
-            Here’s what makes it stand out.
+            NoiseWatch is an app made as a thesis project, where you can both
+            view data and help collect it.
           </p>
         </div>
 

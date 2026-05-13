@@ -8,11 +8,9 @@ A demo for our thesis project.
    ```bash
    npm install
    ```
-2. Pull and update the submodule.
+2. Init the submodule. Only needs to be done once.
    ```bash
-   cd ./public/map
-   git pull origin main
-   cd ../..
+   git submodule update --init --recursive
    ```
 3. Run the website.
    ```bash

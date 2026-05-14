@@ -19,6 +19,4 @@ A demo for our thesis project.
 
 ## TODO
 
-- Add an actual link to the app (Or at the very least remove the Rickroll).
-- Prepare to docker it for deployment/add production instructions.
 - Probably work on the text.

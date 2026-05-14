@@ -63,7 +63,7 @@ function App() {
           </p>
           <div className="flex flex-wrap justify-center md:justify-start gap-3 pt-2">
             <a
-              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              href="https://github.com/MikhailKapitov/thesis-app"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 bg-emerald-600 text-white font-semibold rounded-xl shadow-md hover:bg-emerald-700 transition inline-block"

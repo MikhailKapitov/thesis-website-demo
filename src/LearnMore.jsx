@@ -80,7 +80,7 @@ function LearnMore() {
             {/* TODO? */}
           </p>
           <a
-            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            href="https://github.com/MikhailKapitov/thesis-app"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-4 bg-emerald-600 text-white font-semibold rounded-xl shadow-md hover:bg-emerald-700 transition inline-block"

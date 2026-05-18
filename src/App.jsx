@@ -9,6 +9,7 @@ const VIRTUAL_HEIGHT = 844;
 function App() {
   const screenRef = useRef(null);
   const [scale, setScale] = useState(1);
+  const iframeRef = useRef(null);
 
   useEffect(() => {
     const el = screenRef.current;
@@ -35,6 +36,22 @@ function App() {
             >
               {/* Notch! */}
               <div className="phone-notch" />
+              {/* Fullscreen button. */}
+              <button
+                onClick={() => iframeRef.current?.requestFullscreen()}
+                className="absolute top-2 right-2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-1.5 transition"
+                aria-label="Fullscreen"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 1 0V2h3.5a.5.5 0 0 0 0-1h-4zm9 0a.5.5 0 0 0 0 1H14v3.5a.5.5 0 0 0 1 0v-4a.5.5 0 0 0-.5-.5h-4zM1.5 15a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0V14h3.5a.5.5 0 0 1 0 1h-4zm9 0a.5.5 0 0 1 0-1H14v-3.5a.5.5 0 0 1 1 0v4a.5.5 0 0 1-.5.5h-4z" />
+                </svg>
+              </button>
               {/* iframe with virtual size, scaled to fit. */}
               <iframe
                 src="/map/viewer.html"
@@ -46,6 +63,8 @@ function App() {
                   transformOrigin: "top left",
                 }}
                 title="Map application"
+                ref={iframeRef}
+                allow="fullscreen"
               />
             </div>
           </div>

@@ -12,7 +12,7 @@ function App() {
   const screenRef = useRef(null);
   const [scale, setScale] = useState(1);
   const iframeRef = useRef(null);
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
 
   useEffect(() => {
     const el = screenRef.current;
@@ -62,7 +62,7 @@ function App() {
               </button>
               {/* iframe with virtual size, scaled to fit. */}
               <iframe
-                src="/map/viewer.html"
+                src={`/map/viewer.html?lang=${locale}`}
                 className="border-0"
                 style={{
                   width: `${VIRTUAL_WIDTH}px`,

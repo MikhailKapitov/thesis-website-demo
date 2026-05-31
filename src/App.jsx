@@ -34,7 +34,7 @@ function App() {
         <LanguagePicker />
       </div>
 
-      <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 max-w-5xl w-full">
+      <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 max-w-5xl w-full mt-12 sm:mt-0">
         {/* Phone frame. */}
         <div className="relative flex-shrink-0 w-full max-w-[280px] sm:max-w-sm mx-auto md:mx-0">
           <div className="relative bg-gray-800 rounded-[2.5rem] p-2 shadow-2xl shadow-gray-800/30">

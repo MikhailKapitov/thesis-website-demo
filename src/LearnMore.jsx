@@ -1,31 +1,40 @@
 import { Link } from "react-router-dom";
-
-const features = [
-  {
-    title: "Monitor Noise Pollution",
-    desc: "See noise levels around you on a map.",
-    icon: "🔊",
-  },
-  {
-    title: "Predict Noise Pollution",
-    desc: "Know what noise to expect in the next hours, days or weeks.",
-    icon: "🔮",
-  },
-  {
-    title: "Contribute by Adding Datapoints",
-    desc: "Help the community by measuring and sharing noise levels wherever you are. Every reading makes the map smarter.",
-    icon: "🌱",
-  },
-  {
-    title: "Get Achievements and Land on the Leaderboard",
-    desc: "Earn badges for your contributions and see how you stack up against other noise fighters.",
-    icon: "🏆",
-  },
-];
+import { useLanguage } from "./context/LanguageContext";
+import LanguagePicker from "./components/LanguagePicker";
 
 function LearnMore() {
+  const { t } = useLanguage();
+
+  const features = [
+    {
+      title: t("learnMore.features.0.title"),
+      desc: t("learnMore.features.0.desc"),
+      icon: "🔊",
+    },
+    {
+      title: t("learnMore.features.1.title"),
+      desc: t("learnMore.features.1.desc"),
+      icon: "🔮",
+    },
+    {
+      title: t("learnMore.features.2.title"),
+      desc: t("learnMore.features.2.desc"),
+      icon: "🌱",
+    },
+    {
+      title: t("learnMore.features.3.title"),
+      desc: t("learnMore.features.3.desc"),
+      icon: "🏆",
+    },
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-200">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-200 relative">
+      {/* Language picker, top right. */}
+      <div className="absolute top-4 right-4 z-50">
+        <LanguagePicker />
+      </div>
+
       <div className="max-w-5xl mx-auto px-4 py-6">
         <Link
           to="/"
@@ -44,16 +53,15 @@ function LearnMore() {
               d="M15 19l-7-7 7-7"
             />
           </svg>
-          Back to the demo
+          {t("learnMore.back")}
         </Link>
 
         <div className="text-center md:text-left mb-12">
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 mb-4">
-            NoiseWatch
+            {t("learnMore.title")}
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl md:mx-0 mx-auto">
-            NoiseWatch is an app made as a thesis project, where you can both
-            view data and help collect it.
+            {t("learnMore.description")}
           </p>
         </div>
 
@@ -74,7 +82,7 @@ function LearnMore() {
 
         <div className="text-center bg-emerald-600/10 rounded-3xl p-8 md:p-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Ready to try it?
+            {t("learnMore.readyTitle")}
           </h2>
           <p className="text-lg text-gray-600 mb-6 max-w-md mx-auto">
             {/* TODO? */}
@@ -85,7 +93,7 @@ function LearnMore() {
             rel="noopener noreferrer"
             className="px-8 py-4 bg-emerald-600 text-white font-semibold rounded-xl shadow-md hover:bg-emerald-700 transition inline-block"
           >
-            Get the app
+            {t("learnMore.readyButton")}
           </a>
         </div>
       </div>

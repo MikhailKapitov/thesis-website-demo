@@ -1,0 +1,34 @@
+{
+  "landing": {
+    "titlePart1": "Monitor noise pollution with",
+    "titlePart2": "NoiseWatch",
+    "description": "NoiseWatch is an app made as a thesis project, where you can both view data and help collect it.",
+    "getApp": "Get the app",
+    "learnMore": "Learn more"
+  },
+  "learnMore": {
+    "back": "Back to the demo",
+    "title": "NoiseWatch",
+    "description": "NoiseWatch is an app made as a thesis project, where you can both view data and help collect it.",
+    "readyTitle": "Ready to try it?",
+    "readyButton": "Get the app",
+    "features": [
+      {
+        "title": "Monitor Noise Pollution",
+        "desc": "See noise levels around you on a map."
+      },
+      {
+        "title": "Predict Noise Pollution",
+        "desc": "Know what noise to expect in the next hours, days or weeks."
+      },
+      {
+        "title": "Contribute by Adding Datapoints",
+        "desc": "Help the community by measuring and sharing noise levels wherever you are. Every reading makes the map smarter."
+      },
+      {
+        "title": "Get Achievements and Land on the Leaderboard",
+        "desc": "Earn badges for your contributions and see how you stack up against other noise fighters."
+      }
+    ]
+  }
+}

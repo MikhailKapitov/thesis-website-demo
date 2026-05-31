@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { useLanguage } from "./context/LanguageContext";
+import LanguagePicker from "./components/LanguagePicker";
 import "./App.css";
 
 // Matches 9:19.5.
@@ -10,6 +12,7 @@ function App() {
   const screenRef = useRef(null);
   const [scale, setScale] = useState(1);
   const iframeRef = useRef(null);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const el = screenRef.current;
@@ -25,7 +28,12 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-200 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-200 flex items-center justify-center p-4 relative">
+      {/* Language picker at the top right. */}
+      <div className="absolute top-4 right-4 z-50">
+        <LanguagePicker />
+      </div>
+
       <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 max-w-5xl w-full">
         {/* Phone frame. */}
         <div className="relative flex-shrink-0 w-full max-w-[280px] sm:max-w-sm mx-auto md:mx-0">
@@ -73,12 +81,13 @@ function App() {
 
         <div className="flex-1 text-center md:text-left space-y-4">
           <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">
-            Monitor noise pollution with
-            <span className="block text-emerald-600">NoiseWatch</span>
+            {t("landing.titlePart1")}
+            <span className="block text-emerald-600">
+              {t("landing.titlePart2")}
+            </span>
           </h1>
           <p className="text-lg text-gray-600 leading-relaxed max-w-md mx-auto md:mx-0">
-            NoiseWatch is an app made as a thesis project, where you can both
-            view data and help collect it.
+            {t("landing.description")}
           </p>
           <div className="flex flex-wrap justify-center md:justify-start gap-3 pt-2">
             <a
@@ -87,13 +96,13 @@ function App() {
               rel="noopener noreferrer"
               className="px-6 py-3 bg-emerald-600 text-white font-semibold rounded-xl shadow-md hover:bg-emerald-700 transition inline-block"
             >
-              Get the app
+              {t("landing.getApp")}
             </a>
             <Link
               to="/learn-more"
               className="px-6 py-3 border border-gray-300 rounded-xl font-semibold text-gray-700 hover:bg-gray-100 transition inline-block"
             >
-              Learn more
+              {t("landing.learnMore")}
             </Link>
           </div>
         </div>
